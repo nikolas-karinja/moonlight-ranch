@@ -1,0 +1,183 @@
+tool-ui {
+    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    opacity: 0;
+
+    z-index: 1000;
+
+    & btn {
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        width: 64px;
+        height: 64px;
+
+        margin-bottom: 12px;
+
+        background-color: #212121;
+        border: none;
+        border-radius: 8px;
+        padding: 0;
+        transition: 0.15s;
+
+        cursor: pointer;
+
+        & bind {
+
+            position: absolute;
+
+            width: 26px;
+            height: 23px;
+
+            margin: -10px 0 0 -10px;
+
+            background-color: black;
+            border-radius: 13px;
+            color: white;
+            font-family: 'Montserrat';
+            font-weight: bold;
+            padding: 3px 0 0 0;
+            text-align: center;
+            transition: 0.15s;
+            vertical-align: middle;
+
+        }
+
+        & front {
+
+            position: absolute;
+
+            width: 64px;
+            height: 64px;
+
+            background-color: #313131;
+            border: none;
+            border-radius: 8px;
+            padding: 0;
+            transition: 0.15s;
+
+        }
+
+        & icon {
+
+            position: absolute;
+
+            width: 64px;
+            height: 64px;
+
+            margin: 0;
+
+            background-image: none;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 64px 64px;
+            transition: 0.15s;
+
+        }
+
+        &#home {
+
+            margin-right: 12px;
+
+            & icon {
+
+                background-image: url( ../../assets/images/interface/home-icon.png );
+
+            }
+
+        }
+
+        &#membership {
+
+            margin-right: 88px;
+
+            & icon {
+
+                background-image: url( ../../assets/images/interface/membership-icon.png );
+
+            }
+
+        }
+
+        &#rooms {
+
+            margin-right: 164px;
+
+            & icon {
+
+                background-image: url( ../../assets/images/interface/rooms-icon.png );
+
+            }
+
+        }
+
+        &#location {
+
+            margin-right: 240px;
+
+            & icon {
+
+                background-image: url( ../../assets/images/interface/location-icon.png );
+
+            }
+
+        }
+
+        &:hover {
+
+            & bind, front, icon {
+
+                transform: translateY( -10px );
+
+            }
+
+            & bind {
+
+                color: turquoise;
+
+            }
+
+        }
+
+    }
+
+    & label {
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        margin: 0 12px 105px 0;
+
+        background-color: #212121;
+        border-radius: 8px;
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 20px;
+        overflow: hidden;
+        padding: 6px 12px 6px 12px;
+        transition: 0.15s;
+
+    }
+
+}
+
+@keyframes tools-appear {
+ 
+    from {
+
+        opacity: 0;
+
+    } to {
+
+        opacity: 1;
+
+    }
+
+}

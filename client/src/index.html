@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Moonlight Ranch</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+	<!-- <link rel='icon' href='../assets/images/marketing/logo-icon.64.png'> -->
+	<link rel="stylesheet" href="/client/src/styles/html.min.css">
+	<link rel="stylesheet" href="/client/src/styles/title.min.css">
+	<link rel="stylesheet" href="/client/src/styles/tools.min.css">
+</head>
+
+<body>
+	<tool-ui>
+		<btn id='home' label='Home'><front></front><bind>H</bind><icon></icon></btn>
+		<btn id='membership' label='Membership'><front></front><bind>M</bind><icon></icon></btn>
+		<btn id='rooms' label='Rooms'><front></front><bind>R</bind><icon></icon></btn>
+        <btn id='location' label='Location'><front></front><bind>L</bind><icon></icon></btn>
+		
+		<label>Welcome</label>
+	</tool-ui>
+
+	<text-ui id='text'>
+		<content>
+			<ul id='title'>
+				<li>Moonlight Ranch</li>
+			</ul>
+			<hr id='title' size='2' width="100px" color="grey">
+			<ul id='description'>
+				<li>The Moonlight Ranch. A place where views replace the ongoing semantics of the big city. Located in Montana,</li>
+				<li>which is 15 miles from the resort town of Red Lodge, 40 acres of wide-open space. On the west side of the</li>
+				<li>property lies the whimsical Beartooth Mountains while you can turn east to gaze at the majestic Clark's</li>
+				<li>Forke / Yellowstone River. The property also is on a bluff 400 feet above the river. A little way up Grove Creek</li>
+				<li>Road, you can hike or drive through the omniscient Mateetsee trail, the epitome of nature. Just down the</li>
+				<li>highway is the resort town of Red Lodge, famous for its winter and summer extreme sports and history. You can</li>
+				<li>enjoy the extravagant and joyous restaurants located all around the town while going up to Red Lodge Mountain</li>
+				<li>to ski and snowboard during the winter. You can even go up through the famous Beartooth Pass Highway to</li>
+				<li>Grizzly Peak to do those things all year round. There are also many historical landmarks placed around the</li>
+				<li>town that will always give you something new to learn about. Yellowstone Park is only a short 1 hour and 34</li>
+				<li>minutes away from the Moonlight Ranch bringing you even closer to nature.</li>
+			</ul>
+			<ul id='loading'>
+				<li>LOADING EXPERIENCE</li>
+			</ul>
+		</content>
+		
+		<engine-logo></engine-logo>
+	</text-ui>
+
+	<page id='rooms'></page>
+
+	<script src='/client/src/scripts/main.js' type='module'></script>
+</body>
+
+</html>
