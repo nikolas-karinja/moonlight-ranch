@@ -1,0 +1,24 @@
+{
+  "name": "moonlight-ranch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lotech-studios/moonlight-ranch.git"
+  },
+  "author": "Nikolas Karinja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lotech-studios/moonlight-ranch/issues"
+  },
+  "homepage": "https://github.com/lotech-studios/moonlight-ranch#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "http": "^0.0.1-security",
+    "socket.io": "^4.4.1"
+  }
+}

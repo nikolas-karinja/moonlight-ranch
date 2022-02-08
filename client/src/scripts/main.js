@@ -11,6 +11,8 @@ class App extends Xerxes.app.default {
 
         super()
 
+        this.actors = Actors
+
     }
 
     init () {
@@ -24,7 +26,7 @@ class App extends Xerxes.app.default {
         this.animateLogo()
 
         this.resize()
-        this.visualize()
+        // this.visualize()
 
     }
 

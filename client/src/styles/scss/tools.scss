@@ -80,9 +80,21 @@ tool-ui {
 
         }
 
-        &#home {
+        &#contact {
 
             margin-right: 12px;
+
+            & icon {
+
+                background-image: url( ../../assets/images/interface/contact-icon.png );
+
+            }
+
+        }
+
+        &#home {
+
+            margin-right: 316px;
 
             & icon {
 
@@ -94,7 +106,7 @@ tool-ui {
 
         &#membership {
 
-            margin-right: 88px;
+            margin-right: 240px;
 
             & icon {
 
@@ -118,7 +130,7 @@ tool-ui {
 
         &#location {
 
-            margin-right: 240px;
+            margin-right: 88px;
 
             & icon {
 

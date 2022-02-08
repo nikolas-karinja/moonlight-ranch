@@ -8,8 +8,8 @@ class SceneControls extends Xerxes.control.orbit {
 
         // angling
 
-        this.maxPolarAngle = 0.7238392541543307
-        this.minPolarAngle = 0.7238392541543307
+        this.maxPolarAngle = Math.PI / 2
+        // this.minPolarAngle =  Math.PI / 2
 
         // damping (interia)
 
@@ -18,8 +18,8 @@ class SceneControls extends Xerxes.control.orbit {
 
         // distancing
 
-        this.maxDistance = 20
-        this.minDistance = 5
+        this.maxDistance = 27.5
+        this.minDistance = 1
 
         // panning
 

@@ -46,7 +46,9 @@ function setupTestRoom () {
 
             model.scene.children[ 0 ].castShadow = true
 
-            Actors.scene.main.add( model.scene )
+            Actors.house = model.scene
+
+            Actors.scene.main.add( Actors.house )
 
             // add plane for shadows
 

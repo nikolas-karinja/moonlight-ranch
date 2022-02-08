@@ -30,8 +30,7 @@ text-ui {
     
         & ul {
             &#description, &#loading, &#title {
-                padding-inline-start: 0;
-                pointer-events: auto;
+                padding-inline-start: 0;    
                 transition: 0.25s;
             }
 
@@ -51,10 +50,6 @@ text-ui {
                     white-space: nowrap;
     
                     
-                }
-
-                &:hover {
-                    transform: rotate3d( -1, 2, 0, 20deg );
                 }
             }
 
@@ -113,7 +108,7 @@ text-ui {
 
         margin: 1vh;
 
-        background-image: url( '/client/public/assets/images/logos/logo-rock-text-sub-small.png' );
+        background-image: none;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -217,11 +212,13 @@ text-ui {
         background-color: white;
         box-shadow: inset 0 0 25vw rgba( 0, 0, 0, 0.4 );
         opacity: 1;
+
         pointer-events: all;
     } to {
         background-color: white;
         box-shadow: inset 0 0 0 rgba( 0, 0, 0, 0.4 );
         opacity: 0;
+
         pointer-events: none;
     }
 }
@@ -231,11 +228,13 @@ text-ui {
         background-color: white;
         box-shadow: inset 0 0 0 rgba( 0, 0, 0, 0.4 );
         opacity: 0;
+
         pointer-events: none;
     } to {
         background-color: white;
         box-shadow: inset 0 0 25vw rgba( 0, 0, 0, 0.4 );
         opacity: 1;
+
         pointer-events: all;
     }
 }
