@@ -1,7 +1,12 @@
 import Xerxes from './xerxes.js'
 import Actors from './actors.js'
+import SiteSettings from './settings.js'
 
+import * as RoomUtils from './utils/rooms.js'
 import * as SceneUtils from './utils/scene.js'
+import * as UIUtils from './utils/ui.js'
+
+import * as Tween from './tween.js'
 
 import { generateListeners } from './listeners.js'
 
@@ -19,28 +24,42 @@ class App extends Xerxes.app.default {
 
         SceneUtils.setupActors()
         SceneUtils.setupLighting()
-        SceneUtils.setupTestRoom()
+        SceneUtils.setupHouse()
+
+        UIUtils.setup()
+
+        RoomUtils.setup()
 
         generateListeners()
 
         this.animateLogo()
 
         this.resize()
-        // this.visualize()
+        this.visualize()
 
     }
 
     update () {
 
-        if ( Actors.camera.scene ) Actors.renderer.scene.render( Actors.scene.main, Actors.camera.scene )
+        if ( screen.orientation.type == 'landscape-primary' ) {
 
-        if( Actors.light.sun && Actors.control.scene ) Actors.light.sun.update( Actors.control.scene.target )
-
-        if ( Object.keys( Actors.control ).length > 0 ) {
-
-            for ( const c in Actors.control ) Actors.control[ c ].update()
-
+            if ( Actors.camera.scene && SiteSettings.page.selected == 'rooms' ) {
+            
+                Actors.renderer.scene.render( Actors.scene.main, Actors.camera.scene )
+    
+            }
+    
+            if( Actors.light.sun && Actors.control.scene ) Actors.light.sun.update( Actors.control.scene.target )
+    
+            if ( Object.keys( Actors.control ).length > 0 ) {
+    
+                for ( const c in Actors.control ) Actors.control[ c ].update()
+    
+            }
+            
         }
+
+        Tween.update()
 
     }
 
@@ -74,6 +93,7 @@ class App extends Xerxes.app.default {
             setTimeout ( () => {
 
                 document.body.querySelector( 'tool-ui' ).style.animation = 'tools-appear 2s forwards'
+                document.body.querySelector( 'page#home' ).style.animation = 'appear 2s forwards'
 
             }, 2000 )
 

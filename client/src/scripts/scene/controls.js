@@ -18,11 +18,12 @@ class SceneControls extends Xerxes.control.orbit {
 
         // distancing
 
-        this.maxDistance = 27.5
+        this.maxDistance =30
         this.minDistance = 1
 
         // panning
 
+        this.enablePan = false
         this.panSpeed = 2
         this.screenSpacePanning = false
 

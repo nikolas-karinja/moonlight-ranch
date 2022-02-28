@@ -1,182 +1,365 @@
-tool-ui {
+@media all and ( orientation: landscape ) {
+
+    tool-ui {
     
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    opacity: 0;
-
-    z-index: 1000;
-
-    & btn {
-
         position: absolute;
         right: 0;
         bottom: 0;
-
-        width: 64px;
-        height: 64px;
-
-        margin-bottom: 12px;
-
-        background-color: #212121;
-        border: none;
-        border-radius: 8px;
-        padding: 0;
-        transition: 0.15s;
-
-        cursor: pointer;
-
-        & bind {
-
+    
+        opacity: 0;
+    
+        z-index: 1000;
+    
+        & btn {
+    
             position: absolute;
-
-            width: 26px;
-            height: 23px;
-
-            margin: -10px 0 0 -10px;
-
-            background-color: black;
-            border-radius: 13px;
-            color: white;
-            font-family: 'Montserrat';
-            font-weight: bold;
-            padding: 3px 0 0 0;
-            text-align: center;
-            transition: 0.15s;
-            vertical-align: middle;
-
-        }
-
-        & front {
-
-            position: absolute;
-
+            right: 0;
+            bottom: 0;
+    
             width: 64px;
             height: 64px;
-
-            background-color: #313131;
+    
+            margin-bottom: 12px;
+    
+            background-color: #212121;
             border: none;
             border-radius: 8px;
             padding: 0;
             transition: 0.15s;
-
-        }
-
-        & icon {
-
-            position: absolute;
-
-            width: 64px;
-            height: 64px;
-
-            margin: 0;
-
-            background-image: none;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 64px 64px;
-            transition: 0.15s;
-
-        }
-
-        &#contact {
-
-            margin-right: 12px;
-
-            & icon {
-
-                background-image: url( ../../assets/images/interface/contact-icon.png );
-
-            }
-
-        }
-
-        &#home {
-
-            margin-right: 316px;
-
-            & icon {
-
-                background-image: url( ../../assets/images/interface/home-icon.png );
-
-            }
-
-        }
-
-        &#membership {
-
-            margin-right: 240px;
-
-            & icon {
-
-                background-image: url( ../../assets/images/interface/membership-icon.png );
-
-            }
-
-        }
-
-        &#rooms {
-
-            margin-right: 164px;
-
-            & icon {
-
-                background-image: url( ../../assets/images/interface/rooms-icon.png );
-
-            }
-
-        }
-
-        &#location {
-
-            margin-right: 88px;
-
-            & icon {
-
-                background-image: url( ../../assets/images/interface/location-icon.png );
-
-            }
-
-        }
-
-        &:hover {
-
-            & bind, front, icon {
-
-                transform: translateY( -10px );
-
-            }
-
+    
+            cursor: pointer;
+    
             & bind {
-
-                color: turquoise;
-
+    
+                position: absolute;
+    
+                width: 26px;
+                height: 23px;
+    
+                margin: -10px 0 0 -10px;
+    
+                background-color: black;
+                border-radius: 13px;
+                color: white;
+                font-family: 'Montserrat';
+                font-weight: bold;
+                padding: 3px 0 0 0;
+                text-align: center;
+                transition: 0.15s;
+                vertical-align: middle;
+    
             }
-
+    
+            & front {
+    
+                position: absolute;
+    
+                width: 64px;
+                height: 64px;
+    
+                background-color: #313131;
+                border: none;
+                border-radius: 8px;
+                padding: 0;
+                transition: 0.15s;
+    
+            }
+    
+            & icon {
+    
+                position: absolute;
+    
+                width: 64px;
+                height: 64px;
+    
+                margin: 0;
+    
+                background-image: none;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 64px 64px;
+                transition: 0.15s;
+    
+            }
+    
+            &#contact {
+    
+                margin-right: 12px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/contact-icon.png );
+    
+                }
+    
+            }
+    
+            &#home {
+    
+                margin-right: 316px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/home-icon.png );
+    
+                }
+    
+            }
+    
+            &#membership {
+    
+                margin-right: 240px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/membership-icon.png );
+    
+                }
+    
+            }
+    
+            &#rooms {
+    
+                margin-right: 164px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/rooms-icon.png );
+    
+                }
+    
+            }
+    
+            &#location {
+    
+                margin-right: 88px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/location-icon.png );
+    
+                }
+    
+            }
+    
+            &:hover {
+    
+                & bind, front, icon {
+    
+                    transform: translateY( -10px );
+    
+                }
+    
+                & bind {
+    
+                    color: turquoise;
+    
+                }
+    
+            }
+    
         }
-
+    
+        & label {
+    
+            position: absolute;
+            right: 0;
+            bottom: 0;
+    
+            margin: 0 12px 105px 0;
+    
+            background-color: #212121;
+            border-radius: 8px;
+            color: white;
+            font-family: 'Montserrat';
+            font-weight: bold;
+            font-size: 20px;
+            overflow: hidden;
+            padding: 6px 12px 6px 12px;
+            transition: 0.15s;
+    
+        }
+    
     }
+    
 
-    & label {
+}
 
+@media all and ( orientation: portrait ) {
+
+    tool-ui {
+    
         position: absolute;
         right: 0;
         bottom: 0;
 
-        margin: 0 12px 105px 0;
+        width: 736px;
 
-        background-color: #212121;
-        border-radius: 8px;
-        color: white;
-        font-family: 'Montserrat';
-        font-weight: bold;
-        font-size: 20px;
-        overflow: hidden;
-        padding: 6px 12px 6px 12px;
-        transition: 0.15s;
-
+        margin: 0px 50vw 12px 0px;
+    
+        opacity: 0;
+        transform: translate( 50%, 0% );
+    
+        z-index: 1000;
+    
+        & btn {
+    
+            position: absolute;
+            right: 0;
+            bottom: 0;
+    
+            width: 128px;
+            height: 128px;
+    
+            margin-bottom: 24px;
+    
+            background-color: #212121;
+            border: none;
+            border-radius: 16px;
+            padding: 0;
+            transition: 0.15s;
+    
+            cursor: pointer;
+    
+            & bind {
+    
+                display: none;
+    
+            }
+    
+            & front {
+    
+                position: absolute;
+    
+                width: 128px;
+                height: 128px;
+    
+                background-color: #313131;
+                border: none;
+                border-radius: 16px;
+                padding: 0;
+                transition: 0.15s;
+    
+            }
+    
+            & icon {
+    
+                position: absolute;
+    
+                width: 128px;
+                height: 128px;
+    
+                margin: 0;
+    
+                background-image: none;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 128px 128px;
+                transition: 0.15s;
+    
+            }
+    
+            &#contact {
+    
+                margin-right: 0px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/contact-icon.png );
+    
+                }
+    
+            }
+    
+            &#home {
+    
+                margin-right: 608px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/home-icon.png );
+    
+                }
+    
+            }
+    
+            &#membership {
+    
+                margin-right: 456px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/membership-icon.png );
+    
+                }
+    
+            }
+    
+            &#rooms {
+    
+                margin-right: 304px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/rooms-icon.png );
+    
+                }
+    
+            }
+    
+            &#location {
+    
+                margin-right: 152px;
+    
+                & icon {
+    
+                    background-image: url( ../../assets/images/interface/location-icon.png );
+    
+                }
+    
+            }
+    
+            &:hover {
+    
+                & bind, front, icon {
+    
+                    transform: translateY( -20px );
+    
+                }
+    
+                & bind {
+    
+                    color: turquoise;
+    
+                }
+    
+            }
+    
+        }
+    
+        & label {
+    
+            position: absolute;
+            right: 0;
+            bottom: 0;
+    
+            margin: 0 368px 190px 0;
+    
+            background-color: #212121;
+            border-radius: 16px;
+            color: white;
+            font-family: 'Montserrat';
+            font-weight: bold;
+            font-size: 40px;
+            overflow: hidden;
+            padding: 6px 12px 6px 12px;
+            transition: 0.15s;
+            transform: translate( 50%, 0% )
+    
+        }
+    
     }
+    
 
 }
 

@@ -1,0 +1,51 @@
+@import './variables';
+
+page#home {
+
+    panel {
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: calc( 40vw - 48px );
+        height: calc( ( 40vw - 48px ) / 1.778 );
+
+        margin: 0px 0px 88px 48px;
+
+        background-color: $color-back;
+        border-radius: 8px 8px 0px 0px;
+
+        & iframe {
+
+            border-radius: 8px 8px 0px 0px;
+            outline: none;
+
+        }
+
+        & info {
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: calc( 100% - 40px );
+            height: 20px;
+
+            margin-top: calc( ( 40vw - 48px ) / 1.778 );
+
+            background-color: $color-mid;
+            border-radius: 0px 0px 8px 8px;
+            color: white;
+            display: inline-block;
+            font-family: $font-main;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+
+        }
+
+    }
+
+}

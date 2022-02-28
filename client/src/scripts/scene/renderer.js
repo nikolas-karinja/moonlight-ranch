@@ -11,19 +11,22 @@ class SceneRenderer extends Xerxes.renderer.webgl {
 
         super( parameters )
 
+        this.element = document.body.querySelector( 'page#rooms' )
+            .querySelector( 'renderer' )
+
         this.outputEncoding = Xerxes.constant.encoding.srgb
         this.shadowMap.enabled = true
 
         this.setPixelRatio( window.devicePixelRatio )
-        this.setSize( window.innerWidth, window.innerHeight )
+        this.setSize( this.element.clientWidth, this.element.clientHeight )
 
-        document.body.querySelector( 'page#rooms' ).appendChild( this.domElement )
+        this.element.appendChild( this.domElement )
 
     }
 
     resize () {
 
-        this.setSize( window.innerWidth, window.innerHeight )
+        this.setSize( this.element.clientWidth, this.element.clientHeight )
 
     }
 

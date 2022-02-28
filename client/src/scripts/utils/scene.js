@@ -4,7 +4,10 @@ import Actors from '../actors.js'
 import SceneCamera from '../scene/camera.js'
 import SceneControls from '../scene/controls.js'
 import SceneLight from '../scene/light.js'
+import SceneMouse from '../scene/mouse.js'
 import SceneRenderer from '../scene/renderer.js'
+
+import * as RoomUtils from './rooms.js'
 
 function setupActors () {
 
@@ -15,6 +18,8 @@ function setupActors () {
     Actors.renderer.scene = new SceneRenderer()
 
     Actors.control.scene = new SceneControls( Actors.camera.scene, Actors.renderer.scene.domElement )
+
+    Actors.mouse.scene = new SceneMouse()
 
 }
 
@@ -33,7 +38,7 @@ function setupLighting () {
 
 }
 
-function setupTestRoom () {
+function setupHouse () {
 
     return new Promise( ( resolve ) => {
 
@@ -48,6 +53,24 @@ function setupTestRoom () {
 
             Actors.house = model.scene
 
+            // Actors.house.bounds = new Xerxes.helper.box( Actors.house, 0xff00ff )
+            // Actors.house.add( Actors.house.bounds )
+
+            for ( let i = 0; i < Actors.house.children.length; i++ ) {
+
+                if ( Actors.house.children[ i ].name == 'roof' ||
+                    Actors.house.children[ i ].name == 'floor-2' ) {
+        
+                    Actors.house.children[ i ].material = new Xerxes.material.mesh.phong( {
+                        color: 0x4d3310,
+                        opacity: 0.5,
+                        transparent: true,
+                    } )
+        
+                }
+        
+            }
+
             Actors.scene.main.add( Actors.house )
 
             // add plane for shadows
@@ -60,4 +83,4 @@ function setupTestRoom () {
 
 }
 
-export { setupActors, setupLighting, setupTestRoom }
+export { setupActors, setupLighting, setupHouse }

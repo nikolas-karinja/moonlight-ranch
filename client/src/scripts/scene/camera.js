@@ -6,7 +6,10 @@ class SceneCamera extends Xerxes.camera.perspective {
 
         super()
 
-        this.aspect = window.innerWidth / window.innerHeight
+        this.element = document.body.querySelector( 'page#rooms' )
+            .querySelector( 'renderer' )
+
+        this.aspect =  this.element.clientWidth / this.element.clientHeight 
         this.far = 2000
         this.fov = 45
         this.near = 0.01
@@ -19,7 +22,7 @@ class SceneCamera extends Xerxes.camera.perspective {
 
     updateProjection () {
 
-        this.aspect = window.innerWidth / window.innerHeight
+        this.aspect =  this.element.clientWidth / this.element.clientHeight 
         this.updateProjectionMatrix()
 
     }

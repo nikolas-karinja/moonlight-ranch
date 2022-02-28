@@ -2,17 +2,20 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset='UTF-8'>
 	<title>Moonlight Ranch</title>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+	<link href='https://fonts.googleapis.com/css2?family=Montserrat&display=swap' rel='stylesheet'>
 
 	<!-- <link rel='icon' href='../assets/images/marketing/logo-icon.64.png'> -->
-	<link rel="stylesheet" href="/client/src/styles/html.min.css">
-	<link rel="stylesheet" href="/client/src/styles/title.min.css">
-	<link rel="stylesheet" href="/client/src/styles/tools.min.css">
+	<link rel='stylesheet' href='/client/src/styles/home.min.css'>
+	<link rel='stylesheet' href='/client/src/styles/html.min.css'>
+	<link rel='stylesheet' href='/client/src/styles/membership.min.css'>
+	<link rel='stylesheet' href='/client/src/styles/rooms.min.css'>
+	<link rel='stylesheet' href='/client/src/styles/title.min.css'>
+	<link rel='stylesheet' href='/client/src/styles/tools.min.css'>
 </head>
 
 <body>
@@ -31,7 +34,7 @@
 			<ul id='title'>
 				<li>Moonlight Ranch</li>
 			</ul>
-			<hr id='title' size='2' width="100px" color="grey">
+			<hr id='title' size='2' width='100px' color='grey'>
 			<ul id='description'>
 				<li>The Moonlight Ranch. A place where views replace the ongoing semantics of the big city. Located in Montana,</li>
 				<li>which is 15 miles from the resort town of Red Lodge, 40 acres of wide-open space. On the west side of the</li>
@@ -53,9 +56,60 @@
 		<engine-logo></engine-logo>
 	</text-ui>
 
-	<page id='rooms'></page>
+	<page id='home'>
+		<panel>
+			<iframe src='https://www.youtube.com/embed/m6V-c3p9EWc?rel=0' 
+				allow='fullscreen;' 
+				id='home-video-content' 
+				frameborder='0' 
+				width='100%' 
+				height='100%'></iframe>
 
-	<script src='/client/src/bundle.min.js' type='module'></script>
+			<info>After you finish watching this video, watch the one on the Membership page</info>
+		</panel>
+	</page>
+
+	<page id='membership'>
+		<panel>
+			<iframe src='https://www.youtube.com/embed/h2iG5Yk1LB8?rel=0' 
+				allow='fullscreen;' 
+				id='home-video-content' 
+				frameborder='0' 
+				width='100%' 
+				height='100%'></iframe>
+
+			<info>After you finish watching this video, visit the Rooms page to check out the rooms</info>
+		</panel>
+	</page>
+
+	<page id='rooms'>
+		<panel>
+			<shifter id='back'></shifter>
+			<shifter id='next'></shifter>
+
+			<name>Room 1</name>
+
+			<gallery>
+				<images></images>
+
+				<buy-mem>Buy Membership</buy-mem>
+			</gallery>
+
+			<info>
+				<ul>
+					<li>This is a room. This is so awesome. Look at this info it's just like a filler for text!</li>
+					<li>A second line wow. This is so epic sauce. Look at this info it's just like a filler for text again!</li>
+				</ul>
+			</info>
+		</panel>
+
+		<renderer></renderer>
+	</page>
+
+	<page id='location'></page>
+	<page id='contact'></page>
+
+	<script src='/client/src/scripts/main.js' type='module'></script>
 </body>
 
 </html>
