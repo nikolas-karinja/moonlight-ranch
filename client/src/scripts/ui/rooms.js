@@ -1,8 +1,16 @@
 import SiteSettings from '../settings.js'
+import ClickGallery from './gallery.js'
 
 class RoomUI {
 
     constructor () {
+
+        this.gallery = new ClickGallery( 
+            document.body.querySelector( 'page#rooms panel gallery images' ),
+            'cover',
+            '/client/assets/images/rooms/',
+            ''
+        )
 
         this.name = document.body.querySelector( 'page#rooms panel name' )
         this.info = document.body.querySelector( 'page#rooms panel info ul' )

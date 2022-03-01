@@ -22,6 +22,8 @@ class App extends Xerxes.app.default {
 
     init () {
 
+        RoomUtils.preloadImages()
+
         SceneUtils.setupActors()
         SceneUtils.setupLighting()
         SceneUtils.setupHouse()

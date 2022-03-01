@@ -5,6 +5,29 @@ import * as Tween from '../tween.js'
 
 const target = { x: 0, y: 0, z: 0 }
 
+function preloadImages () {
+
+    const images = []
+
+    fetch( '/client/src/rooms.json' )
+        .then( ( response ) => response.json() )
+        .then( ( data ) => {
+
+            for ( const r in data ) {
+
+                for ( let i = 0; i < data[ r ].images.length; i++ ) {
+
+                    images[ i ] = new Image()
+                    images[ i ].src = data[ r ].images[ i ]
+            
+                }
+
+            }
+
+        } )    
+
+}
+
 function setup () {
 
     return new Promise( ( resolve ) => {
@@ -24,6 +47,9 @@ function setup () {
                 }
 
                 //
+
+                Actors.ui.rooms.gallery.clearImages()
+                Actors.ui.rooms.gallery.addImages( ...SiteSettings.rooms.data[ Object.keys( SiteSettings.rooms.data )[ 0 ] ].images )
 
                 Actors.ui.rooms.set( Object.keys( SiteSettings.rooms.data )[ 0 ] )
 
@@ -97,6 +123,11 @@ function viewRoom ( name ) {
             SiteSettings.rooms.selected.current.z = Actors.house.children[ roomIndex ].position.z
     
             setTimeout( () => {
+
+                Actors.ui.rooms.gallery.clearImages()
+                Actors.ui.rooms.gallery.addImages( ...SiteSettings.rooms.data[ name ].images )
+
+                //
     
                 let newZ, camZ
     
@@ -161,4 +192,4 @@ function viewRoom ( name ) {
 
 }
 
-export { setup, viewRoom }
+export { preloadImages, setup, viewRoom }

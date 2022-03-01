@@ -6,17 +6,15 @@ import * as RoomUtils from './utils/rooms.js'
 
 function generateListeners () {
 
-    window.onclick = ( e ) => {
+    Actors.renderer.scene.element.onclick = ( e ) => {
 
         if ( Actors.mouse.scene ) Actors.mouse.scene.onClick( e )
 
     }
 
-    window.onmousemove = ( e ) => {
+    Actors.renderer.scene.element.onmousemove = ( e ) => {
 
         if ( Actors.mouse.scene ) Actors.mouse.scene.onMove( e )
-
-        //
 
     }
 
