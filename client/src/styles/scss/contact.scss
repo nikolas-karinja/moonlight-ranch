@@ -1,0 +1,86 @@
+@import './variables';
+
+@media all and ( orientation: landscape ) {
+
+    page#contact {
+
+        & panel {
+    
+            position: absolute;
+            left: 0;
+            top: 0;
+    
+            max-width: 600px;
+
+            margin: 50vh 0px 0px 50vw;
+
+            background-color: $color-main;
+            border-radius: 8px;
+            color: white;
+            display: inline-block;
+            font-family: $font-text;
+            font-weight: bold;
+            padding: 10px;
+            transform: $translate-c;
+
+            & header {
+
+                color: darkgray;
+                font-family: $font-main;
+
+            }
+
+            & note {
+
+                color: turquoise;
+
+            }
+    
+        }
+    
+    }
+    
+}
+
+@media all and ( orientation: portrait ) {
+
+    page#contact {
+
+        & panel {
+    
+            position: absolute;
+            left: 0;
+            top: 0;
+    
+            width: calc( 100vw - 96px );
+
+            margin: 50vh 0px 0px 50vw;
+
+            background-color: $color-main;
+            border-radius: 16px;
+            color: white;
+            display: inline-block;
+            font-family: $font-text;
+            font-size: 2vh;
+            font-weight: bold;
+            padding: 20px;
+            transform: $translate-c;
+
+            & header {
+
+                color: darkgray;
+                font-family: $font-main;
+
+            }
+
+            & note {
+
+                color: turquoise;
+
+            }
+    
+        }
+    
+    }
+    
+}

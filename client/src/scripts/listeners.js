@@ -4,8 +4,6 @@ import SiteSettings from './settings.js'
 import * as InterfaceUtils from './utils/interface.js'
 import * as RoomUtils from './utils/rooms.js'
 
-let offMembershipVideo = true
-
 function generateListeners () {
 
     window.onclick = ( e ) => {
@@ -97,19 +95,23 @@ function generateListeners () {
 
     //
 
-    const membershipVideo = document.body.querySelector( 'page#membership' )
+    document.body.querySelector( 'page#contact' ).onmousemove = ( e ) => {
 
-    document.body.querySelector( 'page#membership' ).onmousemove = ( e ) => {
+        if ( screen.orientation.type == 'landscape-primary' ) {
 
-        const bounds = membershipVideo.querySelector( 'panel' ).getBoundingClientRect()
+            const panelElement = document.body.querySelector( 'page#contact panel' )
 
-        const x = -( e.clientY - bounds.y - ( bounds.height / 2 ) ) / 500,
-            y = -( e.clientX - bounds.x - ( bounds.width / 2 ) ) / 500
+            const bounds = panelElement.getBoundingClientRect()
 
-        membershipVideo.querySelector( 'panel' ).style.transition = '0s ease'
+            const x = -( e.clientY - bounds.y - ( bounds.height / 2 ) ) / 500,
+                y = -( e.clientX - bounds.x - ( bounds.width / 2 ) ) / 500
+
+            panelElement.style.transition = '0s ease'
             
-        membershipVideo.querySelector( 'panel' ).style.transform 
-            = `translate( -50%, -50% ) perspective( 100px ) rotateX( ${ x }deg ) rotateY( ${ y }deg )`
+            panelElement.style.transform 
+                = `translate( -50%, -50% ) perspective( 100px ) rotateX( ${ x }deg ) rotateY( ${ -y }deg )`
+
+        }
 
     }
 

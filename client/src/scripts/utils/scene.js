@@ -44,7 +44,7 @@ function setupHouse () {
 
         const loader = new Xerxes.loader.gltf()
 
-        loader.load( 'client/assets/models/room-type-2.glb', ( model ) => {
+        loader.load( 'client/assets/models/house.gltf', ( model ) => {
 
             model.scene.children[ 0 ].material.side = Xerxes.constant.side.double
             model.scene.children[ 0 ].material.needsUpdate = true

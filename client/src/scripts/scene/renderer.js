@@ -15,7 +15,7 @@ class SceneRenderer extends Xerxes.renderer.webgl {
             .querySelector( 'renderer' )
 
         this.outputEncoding = Xerxes.constant.encoding.srgb
-        this.shadowMap.enabled = true
+        // this.shadowMap.enabled = true
 
         this.setPixelRatio( window.devicePixelRatio )
         this.setSize( this.element.clientWidth, this.element.clientHeight )

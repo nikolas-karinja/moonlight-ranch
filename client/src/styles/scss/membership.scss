@@ -10,8 +10,8 @@
             left: 0;
             top: 0;
     
-            width: 1138px;
-            height: 640px;
+            width: calc( ( 100vh - 250px ) * 1.778 );
+            height: calc( 100vh - 250px );
     
             margin-left: 50vw;
             margin-top: calc( ( 100vh - 153px ) / 2 );
@@ -35,7 +35,7 @@
     
                 width: calc( 100% - 40px );
     
-                margin: 640px 0px 0px 0px;
+                margin-top: calc( 100vh - 250px );
     
                 background-color: $color-mid;
                 border-radius: 0px 0px 8px 8px;
