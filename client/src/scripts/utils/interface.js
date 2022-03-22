@@ -8,8 +8,6 @@ function setPage ( pageId ) {
 
         if ( pageId != 'home' ) {
 
-            document.body.querySelector( `text-ui` ).style.animation = 'disappear 1s forwards'
-
             if ( SiteSettings.page.selected ) {
 
                 document.body.querySelector( `page#${ SiteSettings.page.selected }` )
@@ -39,8 +37,6 @@ function setPage ( pageId ) {
                 .style.animation = 'disappear 1s forwards'
 
             document.body.querySelector( `page#home` ).style.animation = 'appear 1s forwards'
-
-            document.body.querySelector( `text-ui` ).style.animation = 'appear-text-ui 1s forwards'
 
             SiteSettings.page.previous = `${ SiteSettings.page.selected }`
 

@@ -78,28 +78,28 @@ class App extends Xerxes.app.default {
 
     animateLogo () {
 
-        setTimeout( () => {
+        // setTimeout( () => {
 
-            document.body.querySelector( 'text-ui' ).style.animation = 'recolor--ui 4s forwards'
-            document.body.querySelector( 'text-ui content' ).style.animation = 'move-to-left--content 2s forwards'
-            document.body.querySelector( 'text-ui content ul#title li' ).style.animation = 'move-to-left--text 4s forwards'
-            document.body.querySelector( 'text-ui content hr#title' ).style.animation = 'move-to-left--hr 2s forwards'
-            document.body.querySelector( 'text-ui content ul#loading li' ).style.animation = 'disappear--loading 2s forwards'
+        //     document.body.querySelector( 'text-ui' ).style.animation = 'recolor--ui 4s forwards'
+        //     document.body.querySelector( 'text-ui content' ).style.animation = 'move-to-left--content 2s forwards'
+        //     document.body.querySelector( 'text-ui content ul#title li' ).style.animation = 'move-to-left--text 4s forwards'
+        //     document.body.querySelector( 'text-ui content hr#title' ).style.animation = 'move-to-left--hr 2s forwards'
+        //     document.body.querySelector( 'text-ui content ul#loading li' ).style.animation = 'disappear--loading 2s forwards'
         
-            const description = document.body.querySelectorAll( 'text-ui content ul#description li' )
+        //     const description = document.body.querySelectorAll( 'text-ui content ul#description li' )
 
-            for ( let i = 0; i < description.length; i++ ) {
-                description[ i ].style.animation = 'move-to-left--text 4s forwards'
-            }
+        //     for ( let i = 0; i < description.length; i++ ) {
+        //         description[ i ].style.animation = 'move-to-left--text 4s forwards'
+        //     }
 
-            setTimeout ( () => {
+        //     setTimeout ( () => {
 
-                document.body.querySelector( 'tool-ui' ).style.animation = 'tools-appear 2s forwards'
-                document.body.querySelector( 'page#home' ).style.animation = 'appear 2s forwards'
+        //         document.body.querySelector( 'tool-ui' ).style.animation = 'tools-appear 2s forwards'
+        //         document.body.querySelector( 'page#home' ).style.animation = 'appear 2s forwards'
 
-            }, 2000 )
+        //     }, 2000 )
 
-        }, 1000 )
+        // }, 1000 )
 
     }
 

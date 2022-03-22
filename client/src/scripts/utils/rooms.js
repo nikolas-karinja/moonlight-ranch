@@ -18,7 +18,7 @@ function preloadImages () {
                 for ( let i = 0; i < data[ r ].images.length; i++ ) {
 
                     images[ i ] = new Image()
-                    images[ i ].src = data[ r ].images[ i ]
+                    images[ i ].src = `/client/assets/images/rooms/${ data[ r ].images[ i ] }`
             
                 }
 
